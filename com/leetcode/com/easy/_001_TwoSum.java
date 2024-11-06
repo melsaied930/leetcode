@@ -1,3 +1,5 @@
+package com.leetcode.com.easy;
+
 import java.util.Arrays;
 
 /*
@@ -30,18 +32,16 @@ Only one valid answer exists.
 */
 public class _001_TwoSum {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(new Solution().twoSum1(new int[]{2, 7, 11, 15}, 9)));
-        System.out.println(Arrays.toString(new Solution().twoSum(new int[]{2, 7, 11, 15}, 9)));
-        System.out.println(Arrays.toString(new Solution().twoSum1(new int[]{3, 2, 4}, 6)));
-        System.out.println(Arrays.toString(new Solution().twoSum(new int[]{3, 2, 4}, 6)));
-        System.out.println(Arrays.toString(new Solution().twoSum1(new int[]{2, 5, 5, 11}, 10)));
-        System.out.println(Arrays.toString(new Solution().twoSum(new int[]{2, 5, 5, 11}, 10)));
-        System.out.println(Arrays.toString(new Solution().twoSum(new int[]{3, 2, 3}, 6)));
+        System.out.println(Arrays.toString(twoSum1(new int[]{2, 7, 11, 15}, 9)));
+        System.out.println(Arrays.toString(twoSum(new int[]{2, 7, 11, 15}, 9)));
+        System.out.println(Arrays.toString(twoSum1(new int[]{3, 2, 4}, 6)));
+        System.out.println(Arrays.toString(twoSum(new int[]{3, 2, 4}, 6)));
+        System.out.println(Arrays.toString(twoSum1(new int[]{2, 5, 5, 11}, 10)));
+        System.out.println(Arrays.toString(twoSum(new int[]{2, 5, 5, 11}, 10)));
+        System.out.println(Arrays.toString(twoSum(new int[]{3, 2, 3}, 6)));
     }
-}
 
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {
         int size = nums.length;
         for (int i = 1; i < size; i++) {
             for (int j = i; j < size; j++) {
@@ -53,7 +53,7 @@ class Solution {
         return new int[]{};
     }
 
-    public int[] twoSum1(int[] nums, int target) {
+    public static int[] twoSum1(int[] nums, int target) {
         int size = nums.length;
         int[] out = new int[2];
         for (int i = 0; i < size; i++) {
